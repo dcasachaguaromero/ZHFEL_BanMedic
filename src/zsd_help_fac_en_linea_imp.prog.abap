@@ -818,7 +818,7 @@ CLASS lcl_proceso IMPLEMENTATION.
     <ls_conditionx>-cond_value = abap_true.
     <ls_conditionx>-currency   = abap_true.
 
-    CALL FUNCTION 'BAPI_SALESORDER_CREATEFROMDAT2'
+    CALL FUNCTION 'BAPI_SALESORDER_CREATEFROMDAT2' "#EC CI_USAGE_OK[2438131]
       EXPORTING
         order_header_in      = ls_order_header_in
         order_header_inx     = ls_order_header_inx
@@ -926,7 +926,7 @@ CLASS lcl_proceso IMPLEMENTATION.
     <ls_billingdatain>-ref_doc     = ls_vbak-vbeln.
     <ls_billingdatain>-ref_doc_ca  = ls_vbak-vbtyp.
 
-    CALL FUNCTION 'BAPI_BILLINGDOC_CREATEMULTIPLE'
+    CALL FUNCTION 'BAPI_BILLINGDOC_CREATEMULTIPLE' "#EC CI_USAGE_OK[2438131]
       EXPORTING
         creatordatain = ls_creatordatain
         testrun       = lv_testrun
